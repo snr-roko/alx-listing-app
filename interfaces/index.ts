@@ -1,20 +1,24 @@
-export interface CardProps {
-  title: string;
-  description?: string;
-  image?: string;
-  imageAlt?: string;
-  children?: React.ReactNode;
-  className?: string;
-  onClick?: () => void;
+interface Address {
+  state: string,
+  city: string,
+  country: string
 }
 
-export interface ButtonProps {
-  children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline' | 'danger';
-  size?: 'sm' | 'md' | 'lg';
-  onClick?: () => void;
-  disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset';
-  className?: string;
-  fullWidth?: boolean;
+interface Offers {
+  bed: string,
+  shower: string,
+  occupants: string
 }
+
+interface PropertyProps {
+  name: string,
+  address: Address,
+  rating: number,
+  category: string[],
+  price: number,
+  offers: Offers,
+  image: string,
+  discount: string
+}
+
+export default PropertyProps
